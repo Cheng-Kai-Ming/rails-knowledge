@@ -1,0 +1,19 @@
+<h1>登入囉！</h1>
+
+  <%= form_for(@user, url:'/account_login') do |form|%>
+  
+  <div class = username> 
+    <%= form.label :username, "你的帳號呢？"%>
+    <%= form.text_field :username%>
+  </div>
+
+  <div class = password>
+    <%= form.label :password, "給個密碼囉！"%>
+    <%= form.password_field :password%>
+  </div>
+
+  <div class = submit>
+    <%= form.submit "交給我送出！"%>
+  </div>
+
+  <%end%>
