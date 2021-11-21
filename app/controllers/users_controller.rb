@@ -19,7 +19,20 @@ class UsersController < ApplicationController
   end
 
   def sign_in
-    @user = User.new
-    
+    @user = User.new    
+  end
+
+  def account_login
+    r = User.login(params[:user])
+
+    if r
+      session[:snoopy] = r.id
+      redirect_to "/already_login"
+    else
+      redirect_to "/"
+    end
+  end
+
+  def already_login
   end
 end

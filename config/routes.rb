@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   post "/account_check", to: "users#account_check"
 
   get "/sign_in", to: "users#sign_in"
+  post "/account_login", to: "users#account_login"
+
+  get "/already_login", to: "users#already_login"
 end
